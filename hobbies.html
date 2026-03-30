@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stufflebeam Studio: Hobbies</title>
+</head>
+<!-- the following links are imported fonts from google. -->
+<!-- the rel='stylesheet' tells the browser that the linked external file is a stylesheet,
+ which contains cascading style rules for the document.-->
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+<!-- the following styles make it easier to make changes as needed -->
+<style>
+
+body {
+  text-align: center; /* THIS IS TO CENTER THE IMAGES ON THE PAGE */
+  background-color: #f7f5f2; /* NEW BACKGROUND COLOR */
+}
+
+h1 {
+    font-family: 'Raleway';font-size: 48px; /* the Raleway font is being imported from google */
+    text-align: center; /* text is aligning on the center of web page */
+    color: #f7f5f2; /* NEW COLOR FOR H1 TEXT */
+    font-weight: bold; /* the font is bold to highlight its importance */
+    background-color: #2f5d50; /* DARKER GREEN FOR H1 HEADINGS */
+    padding: 15px; /* padding adds space around heading to keep it from being crowded */
+}
+
+img {
+    float: left; /* the image will float to the left side of the web page */
+    width: 500px; /* the size had to be adjusted as the original file was too big */
+    height: 300px; /* the size had to be adjusted as the original file was too big */
+    margin-right: 15px; /* margin is added to the right of the photo so its not crowded by the text */
+}
+/* the div element is being used as a container for an image and the main portion of text on the page  */
+div {
+  font-family: 'Open Sans'; font-size: 17px; /* the font is different than the headings to differentiate more between the two */
+  text-align: left; /* the text is aligning left to stay on the right side of the photo for a clean look */
+  font-weight: regular; /* regular font weight will be used for most text */
+  padding: 15px; /* padding adds space to keep it from being crowded */
+}
+
+p {
+  font-family: 'Open Sans'; font-size: 17px; /* the font is different than the headings to differentiate more between the two */
+  text-align: center; /* the text is aligning left to stay on the right side of the photo for a clean look */
+  font-weight: regular; /* regular font weight will be used for most text */
+  padding: 15px; /* padding adds space to keep it from being crowded */
+}
+
+h2 {
+    font-family: 'Raleway';font-size: 24px; /* the Raleway font is being imported from google and as a smaller heading, it uses smaller font size */
+    text-align: left; /* text is aligning on the left side of web page */
+    color: #2B2B2B; /* the text color will be a gray/black throughout the website */
+    font-weight: regular; /* regular font weight will be used for most text */
+    padding: 15px; /* padding adds space around heading to keep it from being crowded */
+    background-color: #8aa399; /* green color will be part of the website color scheme */
+}
+
+h3 {
+    font-family: 'Raleway';font-size: 20px; /* the Raleway font is being imported from google and as a smaller heading, it uses smaller font size */
+    text-align: center; /* text is aligning on the left side of web page */
+    color: #2B2B2B; /* the text color will be a gray/black throughout the website */
+    font-weight: regular; /* regular font weight will be used for most text */
+    padding: 15px; /* padding adds space around heading to keep it from being crowded */
+    background-color: #8aa399; /* green color will be part of the website color scheme */
+}
+
+h4 {
+    font-family: 'Raleway';font-size: 18px; /* the Raleway font is being imported from google and as a smaller heading, it uses smaller font size */
+    text-align: left; /* text is aligning on the left side of web page */
+    color: #2B2B2B; /* the text color will be a gray/black throughout the website */
+    font-weight: regular; /* regular font weight will be used for most text */
+    padding: 15px; /* padding adds space around heading to keep it from being crowded */
+    background-color: #8aa399; /* green color will be part of the website color scheme */
+}
+
+ul {
+  font-family: 'Open Sans'; font-size: 17px; /* the font is different than the headings to differentiate more between the two */
+  text-align: left; /* text is aligning on the left side of web page */
+  font-weight: regular; /* regular font weight will be used for most text */
+  padding-top: 15px; /* padding adds space to keep it from being crowded */
+  padding-bottom: 15px; /* padding adds space to keep it from being crowded */
+  padding-right: 15px; /* padding adds space to keep it from being crowded */
+  background-color: #8aa399; /* green color will be part of the website color scheme */
+}
+
+.image-preview { /* CLASS WITHIN A DIV ELEMENT FOR HOW PHOTOS ARE DISPLAYED TOGETHER */
+  width: auto; /* THE WIDTH IS AUTOMATIC */
+  display: inline-block; /* ALL THE ELEMENTS IN THE DIV WILL APPEAR IN THE SAME CONTAINER*/
+  vertical-align: top; /* THE ELEMENTS IN THE DIV WILL ALIGN TO THE TOP */
+}  
+
+.photos-square { /* CLASS FOR SQUARE PHOTOS */
+  width: 400px; /* PHOTO WIDTH */
+  display: block; /* AS A BLOCK, EACH PHOTO TAKES UP THE FULL WIDTH AVAILABLE IN THE PARENT CONTAINER */
+}
+
+.photos-tall { /* CLASS FOR TALL PHOTOS */ 
+  width: 400px; /* PHOTO WIDTH */
+  height: auto; /* PHOTO HEIGHT */
+  display: block; /* AS A BLOCK, EACH PHOTO TAKES UP THE FULL WIDTH AVAILABLE IN THE PARENT CONTAINER */
+}
+
+table { /* TABLE SHOWING CATEGORY AND PRICE OF PRODUCT */
+  margin: auto; /* AUTOMATIC MARGINS */
+  border: 5px solid #8aa399; /* SMALL BORDER WITH MAIN COLOR THEME*/
+  width: 500px; /* TABLE WIDTH */
+  border-spacing: 0; /* DEFAULT SPACING HAS WHITE LINES, DON'T NEED */
+  font-family: Raleway; /* IMPORTED FONT */
+}
+
+th { /* TWO HEADERS FOR TABLE */
+    color:#2B2B2B; /* TABLE HEADER COLOR */
+}
+
+td, th { /* TABLE HEADER AND DATA */
+  padding: 10px; /* PADDING AROUND HEADER AND COLUMNS */
+  border-style: none; /* NO BORDER */
+  font-family:  Raleway; /* IMPORTED FONT */
+}
+
+caption { /* TITLE OR CAPTION FOR TABLE */
+  color:#2B2B2B; /* CAPTION COLOR */
+  font-family: Raleway; /* IMPORTED FONT */
+  font-size: 20px; /* FONT SIZE */
+  padding-bottom: 8px; /* PADDING FOR THE BOTTOM OF THE CAPTION */
+}
+
+tr:nth-of-type(even) { /* BACKGROUND COLORS FOR EVEN ROWS */
+  background-color: #eaeaea; /* ROW COLOR */
+}
+
+tr:first-of-type { /* HEADING BACKGROUND COLOR */
+  background-color: #8aa399; /* HEADING COLOR */
+} 
+
+</style>
+
+<body>
+  <h1>Hobbies</h1> 
+<br><br>
+<h2>Being Outdoors</h2>
+
+<div> <!-- the div element is being used as a container for an image and the main portion of text on the page -->
+Over the years, I have tried many different activities, things I wouldn’t have done on my own, as I don’t naturally like to branch out and try something new, especially by myself. 
+I tend to stick to what I know, so I am thankful for friends who have invited me along. Check out my photos below of the things I’ve come to enjoy, like hiking, rock climbing, 
+road cycling, disc golf, running, scuba diving, and bird watching!
+</div>
+
+
+<div class="image-preview"> <!-- EACH PHOTO IS IN A CLASS WITHIN THE DIV-->
+  <!-- EACH PHOTO HAS A CLASS -- SQUARE -->
+  <img class="photos-square" src="images/outdoor-1.jpeg" alt="group-hiking"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-square" src="images/outdoor-4.JPG" alt="lucy-hike"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-square" src="images/outdoor-5.jpg" alt="santa-barbara-metric-century"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-square" src="images/outdoor-6.jpeg" alt="jordan-shiloh-hike"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview"> <!-- EACH PHOTO IS IN A CLASS WITHIN THE DIV-->
+  <!-- EACH PHOTO HAS A CLASS. TALL -->
+  <img class="photos-tall" src="images/outdoor-9.jpg" alt="lake-casitas-disc-golf"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/outdoor-10.jpeg" alt="2018-spartan-race"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/outdoor-11.jpg" alt="alabama-hills-rock-climbing"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/outdoor-12.JPG" alt="black-wall-rock-climibing"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/outdoor-13.JPG" alt="beach-front-half-marathon"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/outdoor-16.jpg" alt="wheelers-gorge-rock-climbing"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<hr /> 
+    <br>
+    <h3>We're Going to Swing, They Said...</h3>
+    <video width="500" height="500" controls> <!-- ADDS VIDEO CONTROLS LIKE PLAY, PAUSE, AND VOLUME -->
+  <!-- VIDEO ELEMENT -->
+      <source src="media/yosemite-swing.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <br />
+
+
+
+<h2>Birding</h2>
+<div> <!-- the div element is being used as a container for an image and the main portion of text on the page -->
+My most recent hobby has been bird watching, or ‘birding’ as some like to call it. It’s such a relaxing hobby and has been a great way for me to be outside,
+ enjoy nature, slow down, and step away from screens. Who would’ve thought that listening to bird calls and getting a new ‘lifer’ would be so much fun? I guess that’s why birding has become one of the top hobbies. 
+ Bird watching wasn’t enough for me, so I began taking photos, and this is when I really started to enjoy it. 
+Check out my photos below of my first bird calendar, all showing birds in Southern California.
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/cover.jpg" alt="group-hiking"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/january.jpg" alt="scuba-diving"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/february.jpg" alt="hiking-big-rock"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/march.jpg" alt="lucy-hike"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/april.jpg" alt="group-hiking"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/may.jpg" alt="scuba-diving"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/june.jpg" alt="hiking-big-rock"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/july.jpg" alt="lucy-hike"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/august.jpg" alt="scuba-diving"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/september.jpg" alt="hiking-big-rock"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/october.jpg" alt="lucy-hike"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/november.jpg" alt="group-hiking"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<div class="image-preview">
+  <img class="photos-tall" src="images/december.jpg" alt="scuba-diving"> <!-- image is located locally on my computer and will show alternate text if photo can't
+     be found -->
+</div>
+
+<hr/>
+
+<h3>Early Morning Bird Sounds</h3>
+<p>Take a listen to some of the local birds in my area. There are so many!<br>
+  Turn up the volume 😎
+</p>
+ <audio controls> <!-- ADDS AUDIO CONTROLS LIKE PLAY, PAUSE, AND VOLUME -->
+    <!-- AUDIO ELEMENT -->
+      <source src="media/birds.mp3" type="audio/mp3">
+      Your browser does not suppor the audio tag.
+    </audio>
+    <br><br>
+<hr/>
+
+<br><br><br>
+
+<table><!-- TABLE ELEMENT FOR PHOTOS/CALENDAR -->
+  <caption>Stufflebeam Studio 2026 Calendar Pricing</caption>
+  <tr>   <!-- TABLE ROW -->
+    <th>Category</th> <!-- TABLE HEADER -->
+    <th>Price</th> <!-- TABLE HEADER -->
+  </tr>
+
+  <tr>
+    <td>Single Calendar</td> <!-- TABLE DATA -->
+    <td>$20.00</td> <!-- TABLE DATA -->
+  </tr>
+
+  <tr>
+    <td>4 or More Calendars</td>
+    <td>$15.00/calendar</td>
+  </tr>
+
+  <tr>
+    <td>Individual Photos</td>
+    <td>$3.00</td>
+ </table>
+<br><br><br>
+<hr />
+
+
+
+    <!-- the final element on the page is a list and will be turned into links later on -->
+    <h4>More About Me</h4>
+  <ul> <!-- the <ul> tag stands for 'unordered list' and is ordered by using bullets with the 'list' <li> tag -->
+    <li><a href="aboutme.html">About Me</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+    <li>Travel</li>
+    <li>Work</li>
+    <li>Photos</li>
+    <li>Contact Me</li>
+  </ul>
+
+</body>
+</html>
